@@ -30,8 +30,10 @@ document.addEventListener('click', function(e){
     }
 
     if(selected==='+' || selected==='-' || selected==='*' || selected==='/'){
+        if(leftArray==null){
+            leftArray = answer;
+        }
         operator = selected;
-        return
     }
 
     if(operator==''){
@@ -43,13 +45,8 @@ document.addEventListener('click', function(e){
     if(leftArray!==null){
         display = leftArray.join('');
     }
-
+    console.log(operator);
     if(operator!==''){
-        console.log(typeof leftArray);
-        console.log(leftArray);
-        if(leftArray==null){
-            leftArray = answer;
-        }
         display += operator + ' ';
     }
 
