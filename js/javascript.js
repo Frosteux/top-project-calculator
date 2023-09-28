@@ -7,6 +7,7 @@ const container = document.querySelector('body')
 const displayUI = document.createElement('div')
 displayUI.style.color = 'white';
 
+
 document.addEventListener('click', function(e){
     const selected = e.target.innerText
     if(selected.includes(' ')){
@@ -14,15 +15,10 @@ document.addEventListener('click', function(e){
     }
 
     if(selected=='CLEAR'){
-        leftArray = [];
-        rightArray = [];
-        operator = "";
-        answer = 0;
-        console.log(selected);
-        display = ""
-        displayUI.innerText = display;
+        clear();      
         return
     }
+
     if(selected=='='){
         answer = operate(leftArray.join(''), operator, rightArray.join(''))
         displayUI.innerText = answer;
@@ -94,4 +90,14 @@ function multiply(a,b){
 
 function divide(a,b){
     return +a / +b;
+}
+
+function clear(){
+    leftArray = [];
+    rightArray = [];
+    operator = "";
+    answer = 0;
+    display = ""
+    displayUI.innerText = display;
+    console.log("CLEAR");
 }
