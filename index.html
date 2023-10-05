@@ -9,22 +9,26 @@
 </head>
 <body>
     <div class="container">
-        <button data-numeric>1</button>
-        <button data-numeric>2</button>
-        <button data-numeric>3</button>
-        <button data-numeric>4</button>
-        <button data-numeric>5</button>
-        <button data-numeric>6</button>
-        <button data-numeric>7</button>
-        <button data-numeric>8</button>
-        <button data-numeric>9</button>
-        <button data-numeric>0</button>
-        <button data-operator>+</button>
-        <button data-operator>-</button>
-        <button data-operator>*</button>
-        <button data-operator>÷</button>
-        <button data-equals>=</button>
-        <button data-clear>CLEAR</button>
+        <div class="display">
+            <div class="display" data-operand-two>7</div>
+            <div class="display" data-operand-one>193 +</div>
+        </div>
+        <button onclick="numeric()">1</button>
+        <button onclick="numeric()">2</button>
+        <button onclick="numeric()">3</button>
+        <button onclick="numeric()">4</button>
+        <button onclick="numeric()">5</button>
+        <button onclick="numeric()">6</button>
+        <button onclick="numeric()">7</button>
+        <button onclick="numeric()">8</button>
+        <button onclick="numeric()">9</button>
+        <button onclick="numeric()">0</button>
+        <button onclick="operator()">+</button>
+        <button onclick="operator()">-</button>
+        <button onclick="operator()">*</button>
+        <button onclick="operator()">÷</button>
+        <button onclick="equals()">=</button>
+        <button onclick="clear()">CLEAR</button>
     </div>
 </body>
 </html>
